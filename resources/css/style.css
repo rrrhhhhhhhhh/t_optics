@@ -49,6 +49,10 @@ nav {
   align-items: center;
 }
 
+.menu ul.truncated-menu {
+  display: none;
+}
+
 nav ul {
   margin-right: 1rem;
 }
@@ -62,6 +66,7 @@ nav li {
   display: inline-block;
   margin-top: 10rem;
   margin-right: -2rem;
+  background-color: white;
 }
 
 h1 {
@@ -69,7 +74,6 @@ h1 {
   font-size: 2rem;
   line-height: 1.2;
   padding: 1.5rem 5rem;
-  background-color: white;
 }
 
 .flex {
@@ -79,8 +83,6 @@ h1 {
 header .flex {
   justify-content: flex-end;
 }
-
-
 
 /*  Service Menu  */
 
@@ -119,7 +121,7 @@ header .flex {
   padding-top: 1.5rem;
 }
 
-.business-info {
+.business-container {
   display: flex;
   justify-content: center;
 }
@@ -153,4 +155,102 @@ margin-top: 5rem;
 footer img {
   height: 1.5rem;
   padding: 0 1rem 0 0;
+}
+
+/* Media Query */
+
+@media only screen and (max-width: 1024px) {
+  header {
+    height: 22rem;
+    padding-top: 0;
+  }
+
+  nav.container {
+    max-width: 100%;
+  }
+
+  .main-banner {
+    margin-top: 5rem;
+    margin-right: 2rem;
+  }
+
+  h1 {
+    font-size: 1.33rem;
+    padding: 0.75rem 4rem;
+  }
+
+}
+
+@media only screen and (max-width: 768px) {
+  .menu ul {
+    display: none;
+  }
+
+  .menu ul.truncated-menu {
+    display: block;
+  }
+}
+
+@media only screen and (max-width: 400px) {
+  header {
+    height: 17rem;
+    background-position: 20%;
+  }
+
+  .main-banner {
+    width: 100%;
+    margin: 9rem auto 0 auto;
+    background-color: white;
+  }
+
+  h1 {
+    font-size: 1rem;
+    text-align: center;
+    padding: 1rem 0;
+  }
+
+  nav span {
+    display: none;
+  }
+
+  .supporting {
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    margin: 3.77rem 0;
+  }
+
+  .service {
+    height: auto;
+    margin: 1.54rem;
+    font-size: 0.77rem;
+  }
+
+  .info {
+    width: 100%;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+  }
+
+  .info .title {
+    width: 100%;
+    max-width: none;
+    margin-right: 0;
+    text-align: center;
+  }
+
+  .info p {
+    padding: 1rem;
+    font-size: .77rem;
+  }
+
+  footer {
+    justify-content: center;
+  }
+
+  footer span {
+    display: none;
+  }
+
 }
